@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
-    buildInputs = [pkgs.jupyter pkgs.python310Packages.scipy pkgs.python310Packages.numpy pkgs.python310Packages.matplotlib pkgs.python310Packages.sympy];
+    buildInputs = with pkgs; [xorg.libxcb jupyter python310Packages.nbconvert python310Packages.pyqtwebengine python310Packages.scipy python310Packages.numpy python310Packages.matplotlib python310Packages.sympy];
 }
 
